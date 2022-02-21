@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Starts</title>
+<!--    <script src="./pixi.js"></script>-->
+
+    <script src="https://pixijs.download/release/packages/polyfill.min.js"></script>
+    <script src="https://pixijs.download/release/packages/constants.min.js"></script>
+    <script src="https://pixijs.download/release/packages/math.min.js"></script>
+    <script src="https://pixijs.download/release/packages/math-extras.min.js"></script>
+    <script src="https://pixijs.download/release/packages/runner.min.js"></script>
+    <script src="https://pixijs.download/release/packages/settings.min.js"></script>
+    <script src="https://pixijs.download/release/packages/ticker.min.js"></script>
+    <script src="https://pixijs.download/release/packages/utils.min.js"></script>
+    <script src="https://pixijs.download/release/packages/display.min.js"></script>
+    <script src="https://pixijs.download/release/packages/core.min.js"></script>
+    <script src="https://pixijs.download/release/packages/events.min.js"></script>
+    <script src="https://pixijs.download/release/packages/unsafe-eval.min.js"></script>
+    <script src="https://pixijs.download/release/packages/mixin-get-child-by-name.min.js"></script>
+    <script src="https://pixijs.download/release/packages/mixin-get-global-position.min.js"></script>
+    <script src="https://pixijs.download/release/packages/canvas-display.min.js"></script>
+    <script src="https://pixijs.download/release/packages/extract.min.js"></script>
+    <script src="https://pixijs.download/release/packages/loaders.min.js"></script>
+    <script src="https://pixijs.download/release/packages/compressed-textures.min.js"></script>
+    <script src="https://pixijs.download/release/packages/basis.min.js"></script>
+    <script src="https://pixijs.download/release/packages/mesh.min.js"></script>
+    <script src="https://pixijs.download/release/packages/particle-container.min.js"></script>
+    <script src="https://pixijs.download/release/packages/sprite.min.js"></script>
+    <script src="https://pixijs.download/release/packages/canvas-renderer.min.js"></script>
+    <script src="https://pixijs.download/release/packages/canvas-extract.min.js"></script>
+    <script src="https://pixijs.download/release/packages/filter-alpha.min.js"></script>
+    <script src="https://pixijs.download/release/packages/filter-blur.min.js"></script>
+    <script src="https://pixijs.download/release/packages/filter-color-matrix.min.js"></script>
+    <script src="https://pixijs.download/release/packages/filter-displacement.min.js"></script>
+    <script src="https://pixijs.download/release/packages/filter-fxaa.min.js"></script>
+    <script src="https://pixijs.download/release/packages/filter-noise.min.js"></script>
+    <script src="https://pixijs.download/release/packages/accessibility.min.js"></script>
+    <script src="https://pixijs.download/release/packages/app.min.js"></script>
+    <script src="https://pixijs.download/release/packages/graphics.min.js"></script>
+    <script src="https://pixijs.download/release/packages/graphics-extras.min.js"></script>
+    <script src="https://pixijs.download/release/packages/mesh-extras.min.js"></script>
+    <script src="https://pixijs.download/release/packages/mixin-cache-as-bitmap.min.js"></script>
+    <script src="https://pixijs.download/release/packages/sprite-animated.min.js"></script>
+    <script src="https://pixijs.download/release/packages/sprite-tiling.min.js"></script>
+    <script src="https://pixijs.download/release/packages/spritesheet.min.js"></script>
+    <script src="https://pixijs.download/release/packages/canvas-particle-container.min.js"></script>
+    <script src="https://pixijs.download/release/packages/canvas-sprite.min.js"></script>
+    <script src="https://pixijs.download/release/packages/text-bitmap.min.js"></script>
+    <script src="https://pixijs.download/release/packages/text.min.js"></script>
+    <script src="https://pixijs.download/release/packages/canvas-graphics.min.js"></script>
+    <script src="https://pixijs.download/release/packages/canvas-mesh.min.js"></script>
+    <script src="https://pixijs.download/release/packages/canvas-sprite-tiling.min.js"></script>
+    <script src="https://pixijs.download/release/packages/canvas-text.min.js"></script>
+    <script src="https://pixijs.download/release/packages/interaction.min.js"></script>
+    <script src="https://pixijs.download/release/packages/prepare.min.js"></script>
+    <script src="https://pixijs.download/release/packages/canvas-prepare.min.js"></script>
+    <script>
+      PIXI.Renderer.registerPlugin('accessibility', PIXI.AccessibilityManager);
+      PIXI.Renderer.registerPlugin('batch', PIXI.BatchRenderer);
+      PIXI.Renderer.registerPlugin('extract', PIXI.Extract);
+      PIXI.Renderer.registerPlugin('interaction', PIXI.InteractionManager);
+      PIXI.Renderer.registerPlugin('particle', PIXI.ParticleRenderer);
+      PIXI.Renderer.registerPlugin('prepare', PIXI.Prepare);
+      PIXI.Renderer.registerPlugin('tilingSprite', PIXI.TilingSpriteRenderer);
+      PIXI.CanvasRenderer.registerPlugin('accessibility', PIXI.AccessibilityManager);
+      PIXI.CanvasRenderer.registerPlugin('interaction', PIXI.InteractionManager);
+      PIXI.CanvasRenderer.registerPlugin('extract', PIXI.CanvasExtract);
+      PIXI.CanvasRenderer.registerPlugin('graphics', PIXI.CanvasGraphicsRenderer);
+      PIXI.CanvasRenderer.registerPlugin('mesh', PIXI.CanvasMeshRenderer);
+      PIXI.CanvasRenderer.registerPlugin('prepare', PIXI.CanvasPrepare);
+      PIXI.CanvasRenderer.registerPlugin('sprite', PIXI.CanvasSpriteRenderer);
+      PIXI.Application.registerPlugin(PIXI.AppLoaderPlugin);
+      PIXI.Application.registerPlugin(PIXI.TickerPlugin);
+      PIXI.Loader.registerPlugin(PIXI.BasisLoader);
+      PIXI.Loader.registerPlugin(PIXI.CompressedTextureLoader);
+      PIXI.Loader.registerPlugin(PIXI.DDSLoader);
+      PIXI.Loader.registerPlugin(PIXI.KTXLoader);
+      PIXI.Loader.registerPlugin(PIXI.SpritesheetLoader);
+      PIXI.Loader.registerPlugin(PIXI.BitmapFontLoader);
+    </script>
+
+    <!-- TensorFlow -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.2"></script>
+
+    <script src="./AI.js"></script>
+    <script src="./mathHelper.js"></script>
+    <script src="./star.js"></script>
+    <script src="./multiStar.js"></script>
+    <script src="./mutator.js"></script>
+    <script src="./app.js"></script>
+</head>
+<body style="/*border:1px solid black;*/width: 100vw;height: 100vh;">
+<button onclick="doMutation()" style="font-size: 24px;">Mutation</button>
+<button onclick="doMutation(true)" style="font-size: 24px;">AI Mutation</button>
+<button onclick="doMutationBatch(100, true)" style="font-size: 24px;">AI Mutation n times</button>
+<span style="padding-left: 7px;">Mutation count: <span id="mutationCount">0</span>.</span>
+<span id="tensor-out"></span>
+<button onclick="ai.model = ai.createModel((appConfig.extraStarCountMax + 1) * appConfig.packedConfigSize); ai.fit(ai.starConfigList, ai.starRatingList, ai.model);" style="font-size: 24px;">Fit</button>
+<!--<button onclick="ai.model = ai.createModel(appConfig.extraStarCountMax + 1, appConfig.packedConfigSize); ai.fit(ai.starConfigList, ai.starRatingList, ai.model);" style="font-size: 24px;">Fit</button>-->
+<!--<button onclick="ai.predict(starList[0].packConfig(), ai.model)" style="font-size: 24px;">Predict</button>-->
+<button onclick="ai.predict(starList[0].packConfigList().flat(), ai.model)" style="font-size: 24px;">Predict</button>
+<button onclick="ai.predictAll(starList, ai.model)" style="font-size: 24px;">Predict all</button>
+<button onclick="ai.save(ai.model)" style="font-size: 24px;">Save</button>
+<button onclick="ai.load(ai.model)" style="font-size: 24px;">Load</button>
+<hr>
+</body>
+</html>
